@@ -61,12 +61,84 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-consolidate">module gulp-consolidate</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-consolidate.gulp-consolidate">
+            function <span class="apidocSignatureSpan"></span>gulp-consolidate
+            <span class="apidocSignatureSpan">(engine, data, options)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-consolidate" id="apidoc.module.gulp-consolidate">module gulp-consolidate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-consolidate.gulp-consolidate" id="apidoc.element.gulp-consolidate.gulp-consolidate">
+        function <span class="apidocSignatureSpan"></span>gulp-consolidate
+        <span class="apidocSignatureSpan">(engine, data, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-consolidate = function (engine, data, options) {
+	&#x22;use strict&#x22;;
+
+	options = options || {};
+
+	if (!engine) {
+		throw new Error(&#x22;gulp-consolidate: No template engine supplied&#x22;);
+	}
+
+	try {
+		if (engine === &#x22;hogan&#x22;) {
+			require(&#x22;hogan.js&#x22;);
+		} else {
+			require(engine);
+		}
+	} catch (e) {
+		throw new Error(&#x22;gulp-consolidate: The template engine \&#x22;&#x22; + engine + &#x22;\&#x22; was not found. &#x22; +
+			&#x22;Did you forget to install it?\n\n    npm install --save-dev &#x22; + engine);
+	}
+
+	return map(function (file, callback) {
+		var fileData = data || {};
+
+		function render(err, html) {
+			if (err) {
+				callback(err);
+			} else {
+				file.contents = new Buffer(html);
+				callback(null, file);
+			}
+		}
+
+		if (typeof fileData === &#x22;function&#x22;) {
+			fileData = fileData(file);
+		}
+
+		if (file.contents instanceof Buffer) {
+			try {
+				if (options.useContents) {
+					consolidate[engine].render(String(file.contents), fileData, render);
+				} else {
+					consolidate[engine](file.path, fileData, render);
+				}
+			} catch (err) {
+				callback(err);
+			}
+		} else {
+			callback(new Error(&#x22;gulp-consolidate: streams not supported&#x22;), undefined);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

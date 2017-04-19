@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/timrwood/gulp-consolidate"
-
-    >gulp-consolidate (v0.2.0)</a>
+    <a href="https://github.com/timrwood/gulp-consolidate">gulp-consolidate (v0.2.0)</a>
 </h1>
 <h4>Template engine consolidation for gulp</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-consolidate">module gulp-consolidate</a><ol>
 
@@ -86,23 +79,23 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">gulp-consolidate = function (engine, data, options) {
-	&#x22;use strict&#x22;;
+	"use strict";
 
 	options = options || {};
 
 	if (!engine) {
-		throw new Error(&#x22;gulp-consolidate: No template engine supplied&#x22;);
+		throw new Error("gulp-consolidate: No template engine supplied");
 	}
 
 	try {
-		if (engine === &#x22;hogan&#x22;) {
-			require(&#x22;hogan.js&#x22;);
+		if (engine === "hogan") {
+			require("hogan.js");
 		} else {
 			require(engine);
 		}
 	} catch (e) {
-		throw new Error(&#x22;gulp-consolidate: The template engine \&#x22;&#x22; + engine + &#x22;\&#x22; was not found. &#x22; +
-			&#x22;Did you forget to install it?\n\n    npm install --save-dev &#x22; + engine);
+		throw new Error("gulp-consolidate: The template engine \"" + engine + "\" was not found. " +
+			"Did you forget to install it?\n\n    npm install --save-dev " + engine);
 	}
 
 	return map(function (file, callback) {
@@ -117,7 +110,7 @@
 			}
 		}
 
-		if (typeof fileData === &#x22;function&#x22;) {
+		if (typeof fileData === "function") {
 			fileData = fileData(file);
 		}
 
@@ -132,7 +125,7 @@
 				callback(err);
 			}
 		} else {
-			callback(new Error(&#x22;gulp-consolidate: streams not supported&#x22;), undefined);
+			callback(new Error("gulp-consolidate: streams not supported"), undefined);
 		}
 	});
 }</pre></li>
@@ -148,3 +141,4 @@
     ]
 </div>
 </div>
+</body></html>
