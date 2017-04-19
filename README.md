@@ -1,9 +1,14 @@
-# api documentation for  [gulp-consolidate (v0.2.0)](https://github.com/timrwood/gulp-consolidate)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-consolidate.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-consolidate) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-consolidate.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-consolidate)
+# npmdoc-gulp-consolidate
+
+#### api documentation for  [gulp-consolidate (v0.2.0)](https://github.com/timrwood/gulp-consolidate)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-consolidate.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-consolidate) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-consolidate.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-consolidate)
+
 #### Template engine consolidation for gulp
 
-[![NPM](https://nodei.co/npm/gulp-consolidate.png?downloads=true)](https://www.npmjs.com/package/gulp-consolidate)
+[![NPM](https://nodei.co/npm/gulp-consolidate.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-consolidate)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-consolidate/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-consolidate_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-consolidate/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-consolidate/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-consolidate/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-consolidate/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-consolidate/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-consolidate/build/screenCapture.npmPackageListing.svg)
 
@@ -56,13 +61,11 @@
     "main": "./index.js",
     "maintainers": [
         {
-            "name": "timrwood",
-            "email": "washwithcare@gmail.com"
+            "name": "timrwood"
         }
     ],
     "name": "gulp-consolidate",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/timrwood/gulp-consolidate.git"
@@ -73,16 +76,6 @@
     "version": "0.2.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-consolidate](#apidoc.module.gulp-consolidate)
-
-
-
-# <a name="apidoc.module.gulp-consolidate"></a>[module gulp-consolidate](#apidoc.module.gulp-consolidate)
 
 
 
